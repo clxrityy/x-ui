@@ -4,7 +4,6 @@ import { defineConfig } from 'vitest/config'
 import dts from 'vite-plugin-dts'
 import tailwindcss from 'tailwindcss'
 import { UserConfigExport } from 'vite'
-import { name } from './package.json'
 
 const app = async (): Promise<UserConfigExport> => {
   /**
@@ -12,38 +11,61 @@ const app = async (): Promise<UserConfigExport> => {
    * @octocat/library-repo -> library-repo
    * vite-component-library-template -> vite-component-library-template
    */
-  const formattedName = name.match(/[^/]+$/)?.[0] ?? name
 
   return defineConfig({
     plugins: [
       react(),
       dts({
         insertTypesEntry: true,
+        outDir: 'dist',
       }),
     ],
     css: {
       postcss: {
-        plugins: [tailwindcss],
+        plugins: [tailwindcss({
+          config: path.resolve(__dirname, 'tailwind.config.js'),
+        })],
       },
+      modules: {
+        exportGlobals: true,
+      }
+    },
+    optimizeDeps: {
+      include: ['react', 'react-dom', 'react/jsx-runtime', 'tailwindcss'],
     },
     build: {
       lib: {
         entry: path.resolve(__dirname, 'src/lib/index.ts'),
-        name: formattedName,
-        formats: ['es', 'umd'],
-        fileName: (format) => `${formattedName}.${format}.js`,
+        name: "index",
+        fileName: (format) => `index.${format}.js`,
       },
+      sourcemap: true,
       rollupOptions: {
         external: ['react', 'react/jsx-runtime', 'react-dom', 'tailwindcss'],
-        output: {
-          globals: {
-            react: 'React',
-            'react/jsx-runtime': 'react/jsx-runtime',
-            'react-dom': 'ReactDOM',
-            tailwindcss: 'tailwindcss',
+        output: [
+          {
+            globals: {
+              react: 'React',
+              'react/jsx-runtime': 'react/jsx-runtime',
+              'react-dom': 'ReactDOM',
+              tailwindcss: 'tailwindcss',
+            },
+            entryFileNames: `index.d.ts`,
+            format: "module",
           },
-        },
+          {
+            entryFileNames: `index.es.js`,
+            format: 'es',
+          },
+          {
+            entryFileNames: `index.cjs`,
+            format: 'cjs',
+          },
+        ],
+        input: "src/lib/index.ts",
+        plugins: [dts(), react()],
       },
+      outDir: 'dist',
     },
     test: {
       globals: true,

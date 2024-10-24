@@ -1,2 +1,4 @@
 import './tailwind/theme.css'
-export * from './components'
+import { Button, type ButtonProps, type ButtonVariant } from './components'
+
+export { Button, ButtonProps, ButtonVariant }

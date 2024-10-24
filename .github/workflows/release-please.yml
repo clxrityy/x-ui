@@ -35,21 +35,21 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: '18.x'
+          node-version: '22.x'
           registry-url: 'https://registry.npmjs.org'
-          cache: 'pnpm'
+          cache: 'yarn'
         if: ${{ steps.release.outputs.releases_created }}
 
       - name: CI
-        run: pnpm install --frozen-lockfile
+        run: yarn install --frozen-lockfile
         if: ${{ steps.release.outputs.releases_created }}
 
       - name: Build
-        run: pnpm build:lib
+        run: yarn build:lib
         if: ${{ steps.release.outputs.releases_created }}
 
       - name: Publish
-        run: pnpm publish
+        run: yarn publish
         if: ${{ steps.release.outputs.releases_created }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
