@@ -8,13 +8,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
+      - name: Checkout
+        uses: actions/checkout@v4.2.1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4.0.4
         with:
-          version: 7
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 21.x
-          cache: 'yarn'
-      - run: yarn --no-frozen-lockfile
-      - run: yarn build
+          node-version-file: .nvmrc
+      
+      - name: Setup yarn
+        uses: threeal/setup-yarn-action@v2.0.0
+      
+      - name: Build Package
+        run: yarn build
+      
+      - name: Check Diff
+        run: git diff && git diff-index --quiet --exit-code HEAD
