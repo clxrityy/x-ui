@@ -35,7 +35,7 @@
     "prettier": "prettier --write \"src/**/*.{ts,tsx,js,mdx}\"",
     "test": "vitest",
     "test:cov": "vitest run --coverage",
-    "prepare": "node_modules/.bin/husky",
+    "prepare": "husky install",
     "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\""
   },
   "peerDependencies": {

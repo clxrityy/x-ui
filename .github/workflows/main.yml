@@ -18,7 +18,7 @@ jobs:
       
       - name: Install
         if: steps.yarn-cache.outputs.cache-hit != 'true'
-        run: yarn
+        run: yarn --frozen-lockfile
       
       - name: Build Package
         run: yarn build
