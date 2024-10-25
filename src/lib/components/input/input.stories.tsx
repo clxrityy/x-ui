@@ -1,46 +1,46 @@
-import React from "react";
-import { Input, InputProps, INPUT_VARIANT } from ".";
-import { Meta } from "@storybook/react";
-import { StoryFn } from "@storybook/react";
+import React from 'react'
+import { Input, InputProps, INPUT_VARIANT } from '.'
+import { Meta } from '@storybook/react'
+import { StoryFn } from '@storybook/react'
 
 const meta: Meta<typeof Input> = {
-  title: "components/Input",
+  title: 'components/Input',
   component: Input,
   argTypes: {
-    placeholder: { control: "text" },
+    placeholder: { control: 'text' },
   },
-};
+}
 
-export default meta;
+export default meta
 
-const Template: StoryFn<typeof Input> = (args: InputProps) => <Input {...args} />;
+const Template: StoryFn<typeof Input> = (args: InputProps) => <Input {...args} />
 
-export const Default = Template.bind({});
+export const Default = Template.bind({})
 Default.args = {
-  placeholder: "Default",
+  placeholder: 'Default',
   variant: INPUT_VARIANT.DEFAULT,
-};
+}
 
-export const Underline = Template.bind({});
+export const Underline = Template.bind({})
 Underline.args = {
-  placeholder: "Underline",
+  placeholder: 'Underline',
   variant: INPUT_VARIANT.UNDERLINE,
-};
+}
 
-export const Outline = Template.bind({});
+export const Outline = Template.bind({})
 Outline.args = {
-  placeholder: "Outline",
+  placeholder: 'Outline',
   variant: INPUT_VARIANT.OUTLINE,
-};
+}
 
-export const ShadowInner = Template.bind({});
+export const ShadowInner = Template.bind({})
 ShadowInner.args = {
-  placeholder: "ShadowInner",
+  placeholder: 'ShadowInner',
   variant: INPUT_VARIANT.SHADOW_INNER,
-};
+}
 
-export const Shadow = Template.bind({});
+export const Shadow = Template.bind({})
 Shadow.args = {
-    placeholder: "Shadow",
-    variant: INPUT_VARIANT.SHADOW,
+  placeholder: 'Shadow',
+  variant: INPUT_VARIANT.SHADOW,
 }
