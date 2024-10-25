@@ -9,7 +9,7 @@ export enum BUTTON_VARIANT {
 
 export type ButtonVariant = keyof typeof BUTTON_VARIANT
 
-export const variantClassses: Record<ButtonVariant, string> = {
+export const variantClasses: Record<ButtonVariant, string> = {
   PRIMARY: 'bg-blue-600 text-white',
   SECONDARY: 'bg-gray-500 text-white',
   TERTIARY: 'bg-white text-black border border-black/75 hover:border-black/100',
@@ -24,7 +24,7 @@ export interface ButtonProps extends ComponentProps<'button'> {
 export const Button = ({ variant = BUTTON_VARIANT.PRIMARY, children, ...props }: ButtonProps): JSX.Element => {
   return (
     <button
-      className={`font-semibold px-6 py-3 rounded-md focus:outline-none ${variantClassses[variant]} ${props.disabled ? 'opacity-50 cursor-not-allowed' : ''} focus:ring focus:ring-offset-1 transition-all duration-100 ease-out hover:scale-95 ring-blue-600/65`}
+      className={`font-semibold px-6 py-3 rounded-md focus:outline-none ${variantClasses[variant]} ${props.disabled ? 'opacity-50 cursor-not-allowed' : ''} focus:ring focus:ring-offset-1 transition-all duration-100 ease-out hover:scale-95 ring-blue-600/65 ${props.className}`}
       {...props}
     >
       {children}

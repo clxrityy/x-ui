@@ -1,0 +1,92 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Home" />
+
+<div className="main">
+    <div className="header">
+        # [@clxrity/x-ui](https://www.npmjs.com/package/@clxrity/x-ui)
+
+        A personalized React UI component library.
+
+        <div className="badges">
+            <div>
+                [![view on npm](https://badgen.net/npm/v/@clxrity/x-ui)](https://www.npmjs.org/package/@clxrity/x-ui)
+            </div>
+            <div>
+                [![Gihub repo dependents](https://badgen.net/github/dependents-repo/clxrityy/react-audio)](https://github.com/clxrityy/react-audio/network/dependents?dependent_type=REPOSITORY)
+            </div>
+            <div>
+                [![Node.js CI](https://github.com/clxrityy/x-ui/actions/workflows/main.yml/badge.svg)](https://github.com/clxrityy/x-ui/actions/workflows/main.yml)
+            </div>
+            <div>
+                [![MIT license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/clxrityy/react-audio/blob/main/LICENSE)
+            </div>
+        </div>
+    </div>
+    <div className="installation">
+        ## Installation
+
+        ```bash
+        npm i @clxrity/x-ui
+        ```
+    </div>
+    <div>
+        ## Usage
+
+        ```tsx
+        import { Button } from '@clxrity/x-ui';
+
+        const App = () => {
+            return (
+                <Button onClick={() => console.log('Hello, World!')}>
+                    Click me!
+                </Button>
+            );
+        };
+        ```
+
+        > **Note:** Ensure you add `"use client"` to use client-side features (including `onClick()`) when using with [Next.js](https://nextjs.org/).
+
+    </div>
+</div>
+
+
+
+<style>
+    {`
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+            gap: 1rem;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .badges {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .installation {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.25rem;
+        }
+    `}
+</style>

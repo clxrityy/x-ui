@@ -24,7 +24,8 @@ dist-ssr
 *.sw?
 
 # Storybook
-storybook-static
+# storybook-static
+## REMOVED FOR GITHUB PAGES
 
 # Testing
 coverage

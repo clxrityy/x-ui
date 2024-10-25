@@ -1,3 +1,12 @@
+# CHANGELOGS
+
+- **v0**
+    - [0.1.0](#010)
+    - [0.1.1](#011)
+    - [0.2.0](#020)
+
+---
+
 # 0.1.0
 
 - Initalize the project (forked from [@IgnacioNMiranda/vite-component-library-template](https://github.com/IgnacioNMiranda/vite-component-library-template))
@@ -15,3 +24,19 @@
 # 0.1.1
 
 - Published first version
+
+# 0.2.0
+
+- Updated [README.md](/README.md)
+    - Including badges
+    - Link to changelog
+    - Note about original template
+- Add more components
+    - [`<Card />`](./src/lib/components/card/index.tsx)
+    - [`<Input />`](./src/lib/components/input/index.tsx)
+    - [`<Separator />`](./src/lib/components/separator/index.tsx)
+- Added addition configurations to [storybook](https://storybook.js.org/)
+    - Support for `.mdx` files
+    - Static directory for metadata
+    - Removed the `./storybook-static` from `.gitignore` to push to GitHub pages
+- Added support for GitHub pages
