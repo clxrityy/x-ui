@@ -37,7 +37,7 @@
     "test:cov": "vitest run --coverage",
     "prepare": "husky",
     "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\"",
-    "deploy:docs": "gh-pages -d storybook-static"
+    "deploy:docs": "gh-pages -d docs"
   },
   "peerDependencies": {
     "react": "18.2.0",
