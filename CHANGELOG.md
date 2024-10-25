@@ -38,5 +38,5 @@
 - Added addition configurations to [storybook](https://storybook.js.org/)
     - Support for `.mdx` files
     - Static directory for metadata
-    - Removed the `./storybook-static` from `.gitignore` to push to GitHub pages
 - Added support for GitHub pages
+    - Storybook now can be viewed at [clxrityy.github.io/x-ui](https://clxrityy.github.io/x-ui/)
