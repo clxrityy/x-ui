@@ -1,6 +1,4 @@
-# x-ui
-
-[`@clxrity/x-ui`](https://www.npmjs.com/package/@clxrity/x-ui)
+# @clxrity/x-ui
 
 A personalized React UI component library.
 
@@ -21,7 +19,9 @@ pnpm add @clxrity/x-ui
 
 ---
 
-## [📃 CHANGELOG](/CHANGELOG.md)
+#### [📜 Documentation](https://clxrityy.github.io/x-ui/)
+#### [📃 Changelog](/CHANGELOG.md)
+#### [ℹ️ Source Structure](/src/README.md)
 
 ---
 

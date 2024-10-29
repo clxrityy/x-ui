@@ -17,6 +17,11 @@
     "outDir": "dist",
     "declaration": true,
     "declarationDir": "dist",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
   },
   "include": ["./src/**/*.ts", "./src/**/*.tsx", "vite-env.d.ts"],
   "exclude": ["./src/**/*.stories.*", "./node_modules"]

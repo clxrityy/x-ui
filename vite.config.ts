@@ -1,24 +1,19 @@
 import react from '@vitejs/plugin-react'
-import path from 'node:path'
+import path from 'path'
 import { defineConfig } from 'vitest/config'
 import dts from 'vite-plugin-dts'
 import tailwindcss from 'tailwindcss'
 import { UserConfigExport } from 'vite'
 
-const app = async (): Promise<UserConfigExport> => {
-  /**
-   * Removes everything before the last
-   * @octocat/library-repo -> library-repo
-   * vite-component-library-template -> vite-component-library-template
-   */
 
+const app = async (): Promise<UserConfigExport> => {
   return defineConfig({
     plugins: [
       react(),
       dts({
         insertTypesEntry: true,
         outDir: 'dist',
-      }),
+      })
     ],
     css: {
       postcss: {
@@ -31,7 +26,7 @@ const app = async (): Promise<UserConfigExport> => {
       }
     },
     optimizeDeps: {
-      include: ['react', 'react-dom', 'react/jsx-runtime', 'tailwindcss'],
+      include: ['react', 'react-dom', 'tailwindcss', 'react/jsx-runtime'],
     },
     build: {
       lib: {
@@ -56,16 +51,16 @@ const app = async (): Promise<UserConfigExport> => {
           {
             entryFileNames: `index.es.js`,
             format: 'es',
+            preserveModules: true,
           },
           {
-            entryFileNames: `index.cjs`,
-            format: 'cjs',
+             entryFileNames: `index.cjs`,
+             format: 'cjs',
           },
         ],
         input: "src/lib/index.ts",
-        plugins: [dts(), react()],
       },
-      outDir: 'dist',
+      outDir: 'dist'
     },
     test: {
       globals: true,

@@ -1,0 +1,100 @@
+import { Meta } from '@storybook/blocks'
+import { ButtonAndInputExample } from '../misc/Examples'
+
+<Meta title="Examples" />
+
+# Examples
+
+---
+
+<div className='container'>
+    <div className='example'>
+        <h2 className='heading'>
+            Button and Input Example
+        </h2>
+        <div className='component'>
+            <ButtonAndInputExample />
+        </div>
+        <div className='snippet'>
+            ```tsx
+            import { useState } from 'react'
+            import { Button, Input } from '@clxrity/x-ui'
+            import { ICONS } from '../config'
+
+            export const ButtonAndInputExample = () => {
+                const [name, setName] = useState<string>('')
+                const [loading, setIsLoading] = useState<boolean>(false)
+                const [submitted, setSubmitted] = useState<boolean>(false)
+
+                const handleClick = () => {
+                    setIsLoading(true)
+                    setTimeout(() => {
+                        setIsLoading(false)
+                        setSubmitted(true)
+                    }, 1000)
+                }
+
+                return (
+                    <div className="flex flex-col items-center justify-center gap-6">
+                        <div className="flex flex-row gap-3 items-center justify-center">
+                            <Input
+                                placeholder="Enter your name"
+                                value={name}
+                                onChange={(e) => {
+                                    e.preventDefault()
+                                    setName(e.target.value)
+                                }}
+                            />
+                            <Button onClick={handleClick} variant="default" size="default" disabled={loading}>
+                        {   loading ? <ICONS.LOADING className="animate-spin" /> : 'Set Name'}
+                        </Button>
+                    </div>
+                    {submitted && name && (
+                        <div className="flex flex-row gap-3 items-center justify-center">
+                            <p className="text-lg font-semibold">Hello, {name}!</p>
+                        </div>
+                    )}
+                    </div>
+                )
+            }
+            ```
+        </div>
+    </div>
+
+</div>
+<style>
+    {`
+        .example {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 50px;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .example .component {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .example .heading {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .snippet {
+            background-color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+    `}
+
+</style>

@@ -30,4 +30,4 @@ dist-ssr
 # Testing
 coverage
 
-test
+test/

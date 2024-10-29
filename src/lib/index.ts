@@ -1,14 +1,23 @@
-import './tailwind/theme.css'
 import {
   Button,
   type ButtonProps,
-  type ButtonVariant,
+  Separator,
+  type SeparatorProps,
   Input,
   type InputProps,
-  type InputVariant,
-  Card,
-  type CardProps,
-  type CardVariant,
+  Skeleton,
+  type SkeletonProps,
+  Spoiler,
+  type SpoilerProps,
 } from './components'
 
-export { Button, ButtonProps, ButtonVariant, Input, InputProps, InputVariant, Card, CardProps, CardVariant }
+export {
+  Button,
+  type ButtonProps,
+  Separator,
+  type SeparatorProps,
+  Input,
+  type InputProps,
+  Skeleton,
+  type SkeletonProps,
+}

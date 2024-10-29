@@ -1,7 +1,13 @@
-import { Button, type ButtonProps, type ButtonVariant } from './button'
-import { Input, type InputProps, type InputVariant } from './input'
-import { Card, type CardProps, type CardVariant } from './card'
+import { Button, type ButtonProps } from './button'
+export { Button, type ButtonProps }
+import { Separator, type SeparatorProps } from './separator'
+export { Separator, type SeparatorProps }
 
-export { Button, ButtonProps, ButtonVariant }
-export { Input, InputProps, InputVariant }
-export { Card, CardProps, CardVariant }
+import { Input, type InputProps } from './input'
+export { Input, type InputProps }
+
+import { Skeleton, SkeletonProps } from './skeleton'
+export { Skeleton, type SkeletonProps }
+
+import { Spoiler, SpoilerProps } from './spoiler'
+export { Spoiler, type SpoilerProps }

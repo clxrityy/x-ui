@@ -3,9 +3,8 @@ import { render, screen } from '@testing-library/react'
 import { Input } from '.'
 
 describe('Input', () => {
-  it('should render', async () => {
-    const placeholder = 'Type here'
-    render(<Input placeholder={placeholder} />)
-    expect(screen.getByPlaceholderText(placeholder)).toBeDefined()
+  it('should render an input', async () => {
+    render(<Input placeholder="input" />)
+    expect(screen.getByPlaceholderText('input')).toBeDefined()
   })
 })
