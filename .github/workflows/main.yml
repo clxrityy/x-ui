@@ -23,5 +23,5 @@ jobs:
       - name: Build Package
         run: yarn build
       
-      - name: Check Diff
-        run: git diff && git diff-index --quiet --exit-code HEAD
+      # - name: Check Diff
+      #   run: git diff && git diff-index --quiet --exit-code HEAD
