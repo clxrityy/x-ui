@@ -1,3 +1,5 @@
+import "./tailwind/theme.css";
+
 import {
   Button,
   type ButtonProps,
@@ -9,6 +11,16 @@ import {
   type SkeletonProps,
   Spoiler,
   type SpoilerProps,
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectLabel,
+  SelectItem,
+  SelectScrollDownButton,
+  SelectScrollUpButton,
+  SelectSeparator,
+  SelectTrigger,
+  SelectValue,
 } from './components'
 
 export {
@@ -20,4 +32,16 @@ export {
   type InputProps,
   Skeleton,
   type SkeletonProps,
+  Spoiler,
+  type SpoilerProps,
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectLabel,
+  SelectItem,
+  SelectScrollDownButton,
+  SelectScrollUpButton,
+  SelectSeparator,
+  SelectTrigger,
+  SelectValue,
 }

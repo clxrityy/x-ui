@@ -4,7 +4,8 @@ import { ComponentProps } from 'react'
 import { cn } from '../../../util/cn'
 
 interface ButtonProps extends ComponentProps<typeof UIButton>, VariantProps<typeof buttonVariants> {
-  children: React.ReactNode
+  children: React.ReactNode;
+  className?: string;
 }
 
 const Button = ({ children, className, ...props }: ButtonProps) => {

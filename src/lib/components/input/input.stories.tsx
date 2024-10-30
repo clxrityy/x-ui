@@ -18,7 +18,27 @@ export default meta
 
 const Template: StoryFn<InputProps> = (args: InputProps) => <Input {...args} />
 
-export const Default = Template.bind({})
-Default.args = {
-  placeholder: 'Default input',
+export const Text = Template.bind({})
+Text.args = {
+  placeholder: 'Text input',
+}
+
+export const Password = Template.bind({})
+Password.args = {
+  type: 'password',
+  placeholder: 'Password',
+
+}
+
+export const Email = Template.bind({})
+Email.args = {
+  type: 'email',
+  placeholder: 'example@address.com',
+  className: "invalid:ring-red-500 invalid:border-red-500 invalid:focus:ring-red-500 invalid:focus:border-red-500",
+}
+
+export const Number = Template.bind({})
+Number.args = {
+  type: 'number',
+  placeholder: '0',
 }

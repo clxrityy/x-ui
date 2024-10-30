@@ -11,6 +11,7 @@ export interface SpoilerProps extends ComponentProps<'div'> {
     open?: string | IconType
     close?: string | IconType
   }
+  className?: string
 }
 
 export const Spoiler = ({ previewText, children, className, size = 20, Icons, ...props }: SpoilerProps) => {

@@ -1,7 +1,7 @@
 {
   "name": "@clxrity/x-ui",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "packageManager": "yarn@1.22.22",
   "repository": {
     "type": "git",
@@ -109,6 +109,7 @@
     "vite": "5.4.10",
     "vite-plugin-dts": "^4.3.0",
     "vitest": "2.1.4",
-    "zustand": "^5.0.0"
+    "zustand": "^5.0.0",
+    "@radix-ui/react-select": "^2.1.2"
   }
 }

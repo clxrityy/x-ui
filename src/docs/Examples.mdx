@@ -1,21 +1,58 @@
 import { Meta } from '@storybook/blocks'
-import { ButtonAndInputExample } from '../misc/Examples'
+import { ButtonAndInputExample } from '../misc/Examples';
+import { Spoiler } from "../lib";
 
 <Meta title="Examples" />
 
 # Examples
 
+- [Button and Input Example](#button-and-input-example)
+
 ---
 
 <div className='container'>
     <div className='example'>
-        <h2 className='heading'>
-            Button and Input Example
-        </h2>
+        ## Button and Input Example
+        <ul>
+            <li>
+                The input field accepts text value (name)
+                <li className='sub-li'>
+                    The button is **disabled** when the input field is empty
+                </li>
+                <li className='sub-li'>
+                    When the input is changed, the given value is stored with the `useState()` hook
+                </li>
+            </li>
+            <li>
+                The button is clicked to set the name
+                <li className='sub-li'>
+                    The button is **disabled** when the loading state is true
+                </li>
+                <li className='sub-li'>
+                    The loading state is set to true when the button is clicked
+                </li>
+                <li className='sub-li'>
+                    The loading state is set to false after 1 second (or 1000ms)
+                </li>
+                <li className='sub-li'>
+                    The submitted state is set to true after the loading state is set to false
+                </li>
+            </li>
+            <li>
+                The name is displayed after the button is clicked
+            </li>
+            <li>
+                The **remove** button is displayed after the name is set
+                <li className="sub-li">
+                    Upon click, the name is removed and the submitted state is set to false
+                </li>
+            </li>
+        </ul>
         <div className='component'>
             <ButtonAndInputExample />
         </div>
-        <div className='snippet'>
+        <Spoiler previewText='View code' className='mx-auto'>
+            <div className='snippet'>
             ```tsx
             import { useState } from 'react'
             import { Button, Input } from '@clxrity/x-ui'
@@ -26,11 +63,20 @@ import { ButtonAndInputExample } from '../misc/Examples'
                 const [loading, setIsLoading] = useState<boolean>(false)
                 const [submitted, setSubmitted] = useState<boolean>(false)
 
-                const handleClick = () => {
+                const handleSet = () => {
                     setIsLoading(true)
                     setTimeout(() => {
                         setIsLoading(false)
                         setSubmitted(true)
+                    }, 1000)
+                }
+
+                const handleRemove = () => {
+                    setIsLoading(true)
+                    setSubmitted(false)
+                    setTimeout(() => {
+                        setIsLoading(false)
+                        setName('')
                     }, 1000)
                 }
 
@@ -45,20 +91,26 @@ import { ButtonAndInputExample } from '../misc/Examples'
                                     setName(e.target.value)
                                 }}
                             />
-                            <Button onClick={handleClick} variant="default" size="default" disabled={loading}>
-                        {   loading ? <ICONS.LOADING className="animate-spin" /> : 'Set Name'}
-                        </Button>
-                    </div>
-                    {submitted && name && (
-                        <div className="flex flex-row gap-3 items-center justify-center">
-                            <p className="text-lg font-semibold">Hello, {name}!</p>
+                            <Button onClick={handleSet} variant="default" size="default" disabled={loading || !name.length}>
+                                {loading ? <ICONS.LOADING className="animate-spin" /> : 'Display'}
+                            </Button>
                         </div>
-                    )}
+                        {submitted ? (
+                            <div className="flex flex-col gap-3 items-center justify-center">
+                                <p className="text-lg font-semibold">Hello, {name}!</p>
+                                <Button variant={'destructive'} onClick={handleRemove}>
+                                    Remove
+                                </Button>
+                            </div>
+                        ) : loading ? (
+                            <ICONS.LOADING className="animate-spin" />
+                        ) : null}
                     </div>
                 )
             }
             ```
         </div>
+        </Spoiler>
     </div>
 
 </div>
@@ -91,9 +143,15 @@ import { ButtonAndInputExample } from '../misc/Examples'
             background-color: #f3f4f6;
             padding: 1rem;
             border-radius: 0.5rem;
-            width: 100%;
-            max-width: 100%;
+            max-width: 50%;
             overflow-x: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .sub-li {
+            margin-left: 1rem;
+            list-style-type: circle;
         }
     `}
 

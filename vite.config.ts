@@ -21,9 +21,6 @@ const app = async (): Promise<UserConfigExport> => {
           config: path.resolve(__dirname, 'tailwind.config.js'),
         })],
       },
-      modules: {
-        exportGlobals: true,
-      }
     },
     optimizeDeps: {
       include: ['react', 'react-dom', 'tailwindcss', 'react/jsx-runtime'],

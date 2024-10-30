@@ -5,6 +5,7 @@ export interface SkeletonProps extends ComponentProps<'div'> {
   width?: number
   height?: number
   borderRadius?: number
+  className?: string
 }
 
 export const Skeleton = ({ width = 250, height = 100, className, borderRadius, ...props }: SkeletonProps) => {

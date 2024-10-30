@@ -35,7 +35,7 @@ export const ButtonAndInputExample = () => {
             setName(e.target.value)
           }}
         />
-        <Button onClick={handleSet} variant="default" size="default" disabled={loading}>
+        <Button onClick={handleSet} variant="default" size="default" disabled={loading || !name.length}>
           {loading ? <ICONS.LOADING className="animate-spin" /> : 'Display'}
         </Button>
       </div>
