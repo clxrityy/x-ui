@@ -1,4 +1,4 @@
-import "./tailwind/theme.css";
+import './tailwind/theme.css'
 
 import {
   Button,
@@ -45,3 +45,7 @@ export {
   SelectTrigger,
   SelectValue,
 }
+
+import { useScreenSize } from './hooks'
+
+export { useScreenSize }

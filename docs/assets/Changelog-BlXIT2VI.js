@@ -1,4 +1,4 @@
-import{j as n}from"./jsx-runtime-QvZ8i92b.js";import{useMDXComponents as l}from"./index-FeUjBnvO.js";import{ae as r}from"./index-WJYbE2PD.js";import"./index-uubelm5h.js";import"./iframe-BqvJ3TjI.js";import"../sb-preview/runtime.js";import"./index-Dei0BBcc.js";import"./index-D-8MO0q_.js";import"./extends-CF3RwP-h.js";import"./index-DmeKSGxc.js";import"./index-DrFu-skq.js";function s(i){const e={a:"a",code:"code",h1:"h1",h4:"h4",hr:"hr",li:"li",strong:"strong",ul:"ul",...l(),...i.components};return n.jsxs(n.Fragment,{children:[n.jsx(r,{title:"Changelogs"}),`
+import{j as n}from"./jsx-runtime-QvZ8i92b.js";import{useMDXComponents as l}from"./index-FeUjBnvO.js";import{ae as r}from"./index-CxUrVaQ1.js";import"./index-uubelm5h.js";import"./iframe-DZoONFIH.js";import"../sb-preview/runtime.js";import"./index-Dei0BBcc.js";import"./index-D-8MO0q_.js";import"./extends-CF3RwP-h.js";import"./index-DmeKSGxc.js";import"./index-DrFu-skq.js";function s(i){const e={a:"a",code:"code",h1:"h1",h4:"h4",hr:"hr",li:"li",pre:"pre",strong:"strong",ul:"ul",...l(),...i.components};return n.jsxs(n.Fragment,{children:[n.jsx(r,{title:"Changelogs"}),`
 `,n.jsx(e.h1,{id:"changelogs",children:"CHANGELOGS"}),`
 `,n.jsxs(e.ul,{children:[`
 `,n.jsxs(e.li,{children:[n.jsx(e.strong,{children:"v0"}),`
@@ -12,6 +12,7 @@ import{j as n}from"./jsx-runtime-QvZ8i92b.js";import{useMDXComponents as l}from"
 `,n.jsxs(e.ul,{children:[`
 `,n.jsx(e.li,{children:n.jsx(e.a,{href:"#100",children:"1.0.0"})}),`
 `,n.jsx(e.li,{children:n.jsx(e.a,{href:"#101",children:"1.0.1"})}),`
+`,n.jsx(e.li,{children:n.jsx(e.a,{href:"#107",children:"1.0.7"})}),`
 `]}),`
 `]}),`
 `]}),`
@@ -112,4 +113,26 @@ import{j as n}from"./jsx-runtime-QvZ8i92b.js";import{useMDXComponents as l}from"
 `,n.jsx(e.li,{children:"Updated examples"}),`
 `,n.jsxs(e.li,{children:["Fixed issue where property ",n.jsx(e.code,{children:"className"})," was required on most components."]}),`
 `,n.jsxs(e.li,{children:["Remembered to actually import the tailwindcss (",n.jsx(e.code,{children:"lib/tailwind/theme.css"}),")"]}),`
+`]}),`
+`,n.jsx(e.h1,{id:"107",children:"1.0.7"}),`
+`,n.jsxs(e.ul,{children:[`
+`,n.jsxs(e.li,{children:["Updated documentation to include importing the styles",`
+`,n.jsx(e.pre,{children:n.jsx(e.code,{className:"language-tsx",children:`import "@clxrity/x-ui/dist/style.css"
+`})}),`
+`]}),`
+`,n.jsxs(e.li,{children:["Updated styles of the ",n.jsx(e.code,{children:"<Spoiler />"})," component",`
+`,n.jsxs(e.ul,{children:[`
+`,n.jsx(e.li,{children:"The preview text is now justified to the center"}),`
+`]}),`
+`]}),`
+`,n.jsxs(e.li,{children:["Begin adding hooks",`
+`,n.jsxs(e.ul,{children:[`
+`,n.jsxs(e.li,{children:["Added the simple ",n.jsx(e.code,{children:"useScreenSize()"})," hook",`
+`,n.jsxs(e.ul,{children:[`
+`,n.jsx(e.li,{children:"Added an example"}),`
+`]}),`
+`]}),`
+`,n.jsxs(e.li,{children:["Added ",n.jsx(e.code,{children:"useFetch()"})," hook"]}),`
+`]}),`
+`]}),`
 `]})]})}function f(i={}){const{wrapper:e}={...l(),...i.components};return e?n.jsx(e,{...i,children:n.jsx(s,{...i})}):s(i)}export{f as default};

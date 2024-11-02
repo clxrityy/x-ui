@@ -12,5 +12,27 @@ export { Skeleton, type SkeletonProps }
 import { Spoiler, SpoilerProps } from './spoiler'
 export { Spoiler, type SpoilerProps }
 
-import { Select, SelectContent, SelectGroup, SelectLabel, SelectItem, SelectScrollDownButton, SelectScrollUpButton, SelectSeparator, SelectTrigger, SelectValue } from './select';
-export { Select, SelectContent, SelectGroup, SelectLabel, SelectItem, SelectScrollDownButton, SelectScrollUpButton, SelectSeparator, SelectTrigger, SelectValue }
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectLabel,
+  SelectItem,
+  SelectScrollDownButton,
+  SelectScrollUpButton,
+  SelectSeparator,
+  SelectTrigger,
+  SelectValue,
+} from './select'
+export {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectLabel,
+  SelectItem,
+  SelectScrollDownButton,
+  SelectScrollUpButton,
+  SelectSeparator,
+  SelectTrigger,
+  SelectValue,
+}

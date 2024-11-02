@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
-import { Select, SelectContent, SelectTrigger, SelectValue } from '.';
+import { Select, SelectContent, SelectTrigger, SelectValue } from '.'
 
 describe('Select', () => {
   it('should render a select', async () => {
@@ -14,7 +14,7 @@ describe('Select', () => {
           <div>Option 2</div>
           <div>Option 3</div>
         </SelectContent>
-      </Select>
+      </Select>,
     )
     expect(screen.findByText('Option 1')).toBeDefined()
   })

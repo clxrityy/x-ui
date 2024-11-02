@@ -1,12 +1,13 @@
 import { Meta } from '@storybook/blocks'
-import { ButtonAndInputExample } from '../misc/Examples';
-import { Spoiler } from "../lib";
+import { ButtonAndInputExample, UseScreenSizeExample } from '../misc/Examples'
+import { Spoiler } from '../lib'
 
 <Meta title="Examples" />
 
 # Examples
 
 - [Button and Input Example](#button-and-input-example)
+- [Use screen size hook example](#use-screen-size-hook-example)
 
 ---
 
@@ -54,6 +55,7 @@ import { Spoiler } from "../lib";
         <Spoiler previewText='View code' className='mx-auto'>
             <div className='snippet'>
             ```tsx
+            import "@clxrity/x-ui/dist/style.css"
             import { useState } from 'react'
             import { Button, Input } from '@clxrity/x-ui'
             import { ICONS } from '../config'
@@ -112,6 +114,36 @@ import { Spoiler } from "../lib";
         </div>
         </Spoiler>
     </div>
+    ---
+
+    <div className='example'>
+        ## Use screen size hook example
+
+        - The screen size is displayed in pixels
+        - Change the size of the window to see the screen size change
+        - The screen size is updated in real-time
+
+        <UseScreenSizeExample />
+
+        <Spoiler previewText='View code' className='mx-auto'>
+            <div className='snippet'>
+            ```tsx
+            import { useScreenSize } from '@clxrity/x-ui'
+
+            export const UseScreenSizeExample = () => {
+                const screenSize = useScreenSize()
+
+                return (
+                    <div className="flex flex-col items-center justify-center gap-6">
+                        <p>Width: {screenSize.width}px</p>
+                        <p>Height: {screenSize.height}px</p>
+                    </div>
+                )
+            }
+            ```
+            </div>
+        </Spoiler>
+    </div>
 
 </div>
 <style>
@@ -143,10 +175,11 @@ import { Spoiler } from "../lib";
             background-color: #f3f4f6;
             padding: 1rem;
             border-radius: 0.5rem;
-            max-width: 50%;
+            max-width: 85%;
             overflow-x: auto;
             margin-left: auto;
             margin-right: auto;
+            width: fit-content;
         }
 
         .sub-li {

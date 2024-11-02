@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Button, Input } from '../lib'
 import { ICONS } from '../config'
+import { useScreenSize } from '../lib/hooks/useScreenSize'
 
 export const ButtonAndInputExample = () => {
   const [name, setName] = useState<string>('')
@@ -49,6 +50,24 @@ export const ButtonAndInputExample = () => {
       ) : loading ? (
         <ICONS.LOADING className="animate-spin" />
       ) : null}
+    </div>
+  )
+}
+
+export const UseScreenSizeExample = () => {
+  const screenSize = useScreenSize()
+
+  return (
+    <div className="flex flex-col gap-6 items-center">
+      <h3>Screen Size</h3>
+      <ul>
+        <li>
+          <strong>Width:</strong> <span className="font-mono">{screenSize?.width}</span>
+        </li>
+        <li>
+          <strong>Height:</strong> <span className="font-mono">{screenSize?.height}</span>
+        </li>
+      </ul>
     </div>
   )
 }

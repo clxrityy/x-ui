@@ -7,6 +7,7 @@
 - **v1**
     - [1.0.0](#100)
     - [1.0.1](#101)
+    - [1.0.7](#107)
 
 ---
 
@@ -70,3 +71,16 @@
 - Updated examples
 - Fixed issue where property `className` was required on most components.
 - Remembered to actually import the tailwindcss (`lib/tailwind/theme.css`)
+
+# 1.0.7
+
+- Updated documentation to include importing the styles
+    ```tsx
+    import "@clxrity/x-ui/dist/style.css"
+    ```
+- Updated styles of the `<Spoiler />` component
+    - The preview text is now justified to the center
+- Begin adding hooks
+    - Added the simple `useScreenSize()` hook
+        - Added an example
+    - Added `useFetch()` hook
