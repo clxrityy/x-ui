@@ -1,0 +1,3 @@
+import{j as n}from"./jsx-runtime-DR9Q75dM.js";import{T as r}from"./index-Cednp9kH.js";import"./index-DRjF_FHU.js";import"./cn-BM_CldAA.js";const d={title:"components/base/Textarea",component:r,argTypes:{placeholder:{control:{type:"text"}},value:{control:{type:"text"}},onChange:{action:"onChange"}}},p=s=>n.jsx(r,{...s}),e=p.bind({placeholder:"Type something..."});var t,o,a;e.parameters={...e.parameters,docs:{...(t=e.parameters)==null?void 0:t.docs,source:{originalSource:`Template.bind({
+  placeholder: "Type something..."
+})`,...(a=(o=e.parameters)==null?void 0:o.docs)==null?void 0:a.source}}};const x=["Default"];export{e as Default,x as __namedExportsOrder,d as default};
