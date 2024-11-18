@@ -25,5 +25,5 @@ pnpm add @clxrity/x-ui
 
 ---
 
-> - If you're looking to replicate this structure for your own package, please visit the original template repository: [@IgnacioNMiranda/vite-component-library-template](https://github.com/IgnacioNMiranda/vite-component-library-template) for an overview of the setup.
+> - If you're looking to replicate this structure for your own package, please visit the original template repository: [@IgnacioNMiranda/vite-component-library-template](https://github.com/IgnacioNMiranda/vite-component-library-template) for an overview of the setup
 > - You can also read the blog post [here](https://igna.hashnode.dev/vite-react-typescript-component-library-template-setup-explanation) for an explanation on how to set up & publish to a package registry.
