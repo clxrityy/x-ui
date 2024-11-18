@@ -3,7 +3,7 @@ import { useFetch } from '.'
 import { Meta, StoryFn } from '@storybook/react'
 
 const Component = () => {
-  const { data, error } = useFetch('https://api.ipify.org?format=json')
+  const { data, error, loading } = useFetch('https://api.ipify.org?format=json')
 
   return (
     <div className="flex flex-col gap-6 items-center justify-center mx-auto">
@@ -20,11 +20,17 @@ const Component = () => {
         </a>
       </p>
       <ul>
-        <li>
-          <pre className="font-mono font-light bg-gray-100/50 px-2 py-2 rounded-md">
-            {JSON.stringify(data, null, 2)}
-          </pre>
-        </li>
+        {loading ? (
+          <li>
+            <span>Loading...</span>
+          </li>
+        ) : (
+          <li>
+            <pre className="font-mono font-light bg-gray-100/50 px-2 py-2 rounded-md">
+              {JSON.stringify(data, null, 2)}
+            </pre>
+          </li>
+        )}
         {error && (
           <li className="text-red-600">
             <strong>Error:</strong>

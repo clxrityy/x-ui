@@ -1,5 +1,5 @@
 import { Meta } from '@storybook/blocks'
-import { ButtonAndInputExample, UseScreenSizeExample } from '../misc/Examples'
+import { ButtonAndInputExample, UseScreenSizeExample, UseFetchhookExample } from '../misc/Examples'
 import { Spoiler } from '../lib'
 
 <Meta title="Examples" />
@@ -8,6 +8,7 @@ import { Spoiler } from '../lib'
 
 - [Button and Input Example](#button-and-input-example)
 - [Use screen size hook example](#use-screen-size-hook-example)
+- [Use fetch hook example](#use-fetch-hook-example)
 
 ---
 
@@ -141,6 +142,70 @@ import { Spoiler } from '../lib'
                 )
             }
             ```
+            </div>
+        </Spoiler>
+    </div>
+
+    ---
+
+    <div className='example'>
+        ## Use fetch hook example
+
+        - The `useFetch()` hook is used to fetch data from an API
+        - The hook returns the data, error, and loading state.
+        - Data is fetched from `https://api.ipify.org`
+            - The API returns the IP address of the user
+        - The data is displayed in real-time
+
+        <div className='component'>
+            <UseFetchhookExample />
+        </div>
+
+        <Spoiler previewText='View code' className='mx-auto'>
+            <div className='snippet'>
+                ```tsx
+                export const UseFetchhookExample = () => {
+                    const { data, error, loading } = useFetch('https://api.ipify.org?format=json')
+
+                    return (
+                        <div className="flex flex-col gap-6 items-center justify-center mx-auto">
+                            <h3 className="text-3xl font-bold">Random API Fetch</h3>
+                            <p>
+                                Fetching your IP address from{' '}
+                                <a
+                                    href="https://api.ipify.org/"
+                                    className="text-blue-500 hover:underline hover:text-blue-600 focus:text-blue-700"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    api.ipify.org
+                                </a>
+                            </p>
+                            <ul>
+                            {
+                                loading ? (
+                                    <li>
+                                        <span>Loading...</span>
+                                    </li>
+                            ) :
+                                    <pre className="font-mono font-light bg-gray-100/50 px-2 py-2 rounded-md">
+                                        {JSON.stringify(data, null, 2)}
+                                    </pre>
+
+                            }
+                            {error && (
+                                <li className="text-red-600">
+                                    <strong>Error:</strong>
+                                    <pre className="font-mono font-light bg-red-100/50 px-2 py-2 rounded-md">
+                                        {error}
+                                    </pre>
+                                </li>
+                            )}
+                        </ul>
+                    </div>
+                    )
+                }
+                ```
             </div>
         </Spoiler>
     </div>

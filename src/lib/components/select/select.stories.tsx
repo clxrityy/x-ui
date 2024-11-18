@@ -5,8 +5,6 @@ import {
   SelectGroup,
   SelectItem,
   SelectLabel,
-  SelectScrollDownButton,
-  SelectScrollUpButton,
   SelectSeparator,
   SelectTrigger,
   SelectValue,
@@ -14,7 +12,7 @@ import {
 import { Meta, StoryFn } from '@storybook/react'
 
 const meta: Meta<typeof Select> = {
-  title: 'components/Select',
+  title: 'components/base/Select',
   component: Select,
 }
 

@@ -4,7 +4,7 @@ import { Meta, StoryFn } from '@storybook/react'
 import { ICONS } from '../../../config'
 
 const meta: Meta<typeof Button> = {
-  title: 'components/Button',
+  title: 'components/base/Button',
   component: Button,
   argTypes: {
     size: {

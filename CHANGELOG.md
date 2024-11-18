@@ -8,6 +8,7 @@
     - [1.0.0](#100)
     - [1.0.1](#101)
     - [1.0.7](#107)
+    - [1.0.9](#109)
 
 ---
 
@@ -84,3 +85,12 @@
     - Added the simple `useScreenSize()` hook
         - Added an example
     - Added `useFetch()` hook
+
+# 1.1.0
+
+- Remembered to actually export the `useFetch()` hook
+    - Also added an example
+- Added components
+    - **`<Textarea />`**
+- Updated dependencies to latest versions
+- Moved all base components into base folder on storybook

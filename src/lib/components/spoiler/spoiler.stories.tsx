@@ -3,7 +3,7 @@ import { Spoiler, SpoilerProps } from '.'
 import { Meta, StoryFn } from '@storybook/react'
 
 const meta: Meta<typeof Spoiler> = {
-  title: 'components/Spoiler',
+  title: 'components/base/Spoiler',
   component: Spoiler,
   argTypes: {
     previewText: {

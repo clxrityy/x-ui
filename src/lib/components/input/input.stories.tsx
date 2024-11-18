@@ -3,7 +3,7 @@ import { Input, InputProps } from '.'
 import { Meta, StoryFn } from '@storybook/react'
 
 const meta: Meta<typeof Input> = {
-  title: 'components/Input',
+  title: 'components/base/Input',
   component: Input,
   argTypes: {
     placeholder: {

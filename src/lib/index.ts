@@ -21,6 +21,8 @@ import {
   SelectSeparator,
   SelectTrigger,
   SelectValue,
+  Textarea,
+  type TextareaProps,
 } from './components'
 
 export {
@@ -44,8 +46,10 @@ export {
   SelectSeparator,
   SelectTrigger,
   SelectValue,
+  Textarea,
+  type TextareaProps,
 }
 
-import { useScreenSize } from './hooks'
+import { useScreenSize, useFetch } from './hooks'
 
-export { useScreenSize }
+export { useScreenSize, useFetch }

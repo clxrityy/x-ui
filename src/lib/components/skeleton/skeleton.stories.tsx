@@ -3,7 +3,7 @@ import { Skeleton, SkeletonProps } from '.'
 import { Meta, StoryFn } from '@storybook/react'
 
 const meta: Meta<typeof Skeleton> = {
-  title: 'components/Skeleton',
+  title: 'components/base/Skeleton',
   component: Skeleton,
   argTypes: {
     borderRadius: {

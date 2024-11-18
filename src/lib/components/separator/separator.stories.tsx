@@ -3,7 +3,7 @@ import { Separator, SeparatorProps } from '.'
 import { Meta, StoryFn } from '@storybook/react'
 
 const meta: Meta<typeof Separator> = {
-  title: 'components/Separator',
+  title: 'components/base/Separator',
   component: Separator,
   argTypes: {
     orientation: {
