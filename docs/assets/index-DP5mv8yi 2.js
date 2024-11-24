@@ -1,1 +1,0 @@
-import{r as t}from"./index-DRjF_FHU.js";const p=s=>{const[a,r]=t.useState(null),[n,o]=t.useState(null),[c,u]=t.useState(!0);return t.useEffect(()=>{async function f(){try{const l=await(await fetch(s)).json();r(l)}catch(e){o(e.message)}finally{u(!1)}}f()}),{data:a,error:n,loading:c}};export{p as u};

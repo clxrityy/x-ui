@@ -27,8 +27,6 @@ import {
   type StackLoaderProps,
   BounceLoader,
   type BounceLoaderProps,
-  FlipCard,
-  type FlipCardProps,
 } from './components'
 
 export {
@@ -58,8 +56,6 @@ export {
   type StackLoaderProps,
   BounceLoader,
   type BounceLoaderProps,
-  FlipCard,
-  type FlipCardProps,
 }
 
 import { useScreenSize, useFetch } from './hooks'

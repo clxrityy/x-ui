@@ -10,6 +10,7 @@
     - [1.0.7](#107)
     - [1.0.9](#109)
     - [1.2.8](#128)
+    - [1.2.9](#129)
 
 ---
 
@@ -113,3 +114,8 @@
     - Added `<FlipCard />`
 - Updated all dependencies to latest versions
 - Fixed issue where `className` prop was required by just passing `props.className` onto the components (rather than it being it's own parameter)
+
+
+# 1.2.9
+
+- Removed the `<FlipCard />` (temporarily) for unknown issues

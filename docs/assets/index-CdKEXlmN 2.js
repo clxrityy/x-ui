@@ -1,1 +1,0 @@
-import{r as n}from"./index-DRjF_FHU.js";const s=()=>{const[t,i]=n.useState(null);return n.useEffect(()=>{if(typeof window===void 0)return;const e=()=>{i({width:window.innerWidth,height:window.innerHeight})};return e(),window.addEventListener("resize",e),()=>window.removeEventListener("resize",e)},[]),t};export{s as u};

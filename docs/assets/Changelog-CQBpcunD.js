@@ -1,4 +1,4 @@
-import{j as n}from"./jsx-runtime-DR9Q75dM.js";import{useMDXComponents as l}from"./index-ChEI-nsM.js";import{ae as d}from"./index-Kk3XDCNf.js";import"./index-DRjF_FHU.js";import"./iframe-2P-Wsjr7.js";import"../sb-preview/runtime.js";import"./index-uWwxbAOW.js";import"./index-D-8MO0q_.js";import"./index-CzpEL4_8.js";import"./index-DrFu-skq.js";function s(i){const e={a:"a",code:"code",h1:"h1",h4:"h4",hr:"hr",li:"li",pre:"pre",strong:"strong",ul:"ul",...l(),...i.components};return n.jsxs(n.Fragment,{children:[n.jsx(d,{title:"Changelogs"}),`
+import{j as n}from"./jsx-runtime-DR9Q75dM.js";import{useMDXComponents as l}from"./index-ChEI-nsM.js";import{ae as d}from"./index-DRxTRL9r.js";import"./index-DRjF_FHU.js";import"./iframe-CC5yxUhl.js";import"../sb-preview/runtime.js";import"./index-uWwxbAOW.js";import"./index-D-8MO0q_.js";import"./index-CzpEL4_8.js";import"./index-DrFu-skq.js";function s(i){const e={a:"a",code:"code",h1:"h1",h4:"h4",hr:"hr",li:"li",pre:"pre",strong:"strong",ul:"ul",...l(),...i.components};return n.jsxs(n.Fragment,{children:[n.jsx(d,{title:"Changelogs"}),`
 `,n.jsx(e.h1,{id:"changelogs",children:"CHANGELOGS"}),`
 `,n.jsxs(e.ul,{children:[`
 `,n.jsxs(e.li,{children:[n.jsx(e.strong,{children:"v0"}),`
@@ -15,6 +15,7 @@ import{j as n}from"./jsx-runtime-DR9Q75dM.js";import{useMDXComponents as l}from"
 `,n.jsx(e.li,{children:n.jsx(e.a,{href:"#107",children:"1.0.7"})}),`
 `,n.jsx(e.li,{children:n.jsx(e.a,{href:"#109",children:"1.0.9"})}),`
 `,n.jsx(e.li,{children:n.jsx(e.a,{href:"#128",children:"1.2.8"})}),`
+`,n.jsx(e.li,{children:n.jsx(e.a,{href:"#129",children:"1.2.9"})}),`
 `]}),`
 `]}),`
 `]}),`
@@ -119,7 +120,7 @@ import{j as n}from"./jsx-runtime-DR9Q75dM.js";import{useMDXComponents as l}from"
 `,n.jsx(e.h1,{id:"107",children:"1.0.7"}),`
 `,n.jsxs(e.ul,{children:[`
 `,n.jsxs(e.li,{children:["Updated documentation to include importing the styles",`
-`,n.jsx(e.pre,{children:n.jsx(e.code,{className:"language-tsx",children:`import "@clxrity/x-ui/dist/style.css"
+`,n.jsx(e.pre,{children:n.jsx(e.code,{className:"language-tsx",children:`import '@clxrity/x-ui/dist/style.css'
 `})}),`
 `]}),`
 `,n.jsxs(e.li,{children:["Updated styles of the ",n.jsx(e.code,{children:"<Spoiler />"})," component",`
@@ -185,4 +186,8 @@ import{j as n}from"./jsx-runtime-DR9Q75dM.js";import{useMDXComponents as l}from"
 `]}),`
 `,n.jsx(e.li,{children:"Updated all dependencies to latest versions"}),`
 `,n.jsxs(e.li,{children:["Fixed issue where ",n.jsx(e.code,{children:"className"})," prop was required by just passing ",n.jsx(e.code,{children:"props.className"})," onto the components (rather than it being it's own parameter)"]}),`
+`]}),`
+`,n.jsx(e.h1,{id:"129",children:"1.2.9"}),`
+`,n.jsxs(e.ul,{children:[`
+`,n.jsxs(e.li,{children:["Removed the ",n.jsx(e.code,{children:"<FlipCard />"})," (temporarily) for unknown issues"]}),`
 `]})]})}function u(i={}){const{wrapper:e}={...l(),...i.components};return e?n.jsx(e,{...i,children:n.jsx(s,{...i})}):s(i)}export{u as default};

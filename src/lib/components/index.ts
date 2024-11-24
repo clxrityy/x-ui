@@ -51,12 +51,5 @@ export {
 
 // ENHANCED COMPONENTS
 
-import {
-  StackLoader,
-  type StackLoaderProps,
-  BounceLoader,
-  type BounceLoaderProps,
-  FlipCard,
-  type FlipCardProps,
-} from './enhanced'
-export { StackLoader, type StackLoaderProps, BounceLoader, type BounceLoaderProps, FlipCard, type FlipCardProps }
+import { StackLoader, type StackLoaderProps, BounceLoader, type BounceLoaderProps } from './enhanced'
+export { StackLoader, type StackLoaderProps, BounceLoader, type BounceLoaderProps }
