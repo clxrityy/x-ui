@@ -12,7 +12,8 @@ import { Meta } from '@storybook/blocks'
   - [1.0.0](#100)
   - [1.0.1](#101)
   - [1.0.7](#107)
-  - [1.1.0](#110)
+  - [1.0.9](#109)
+  - [1.2.8](#128)
 
 ---
 
@@ -98,3 +99,21 @@ import { Meta } from '@storybook/blocks'
   - **`<Textarea />`**
 - Updated dependencies to latest versions
 - Moved all base components into base folder on storybook
+
+# 1.2.8
+
+- Rearranged all the files
+  - Components are now split into:
+    - `base/`
+    - `enhanced/`
+  - Component directories all have an `index.ts` file to simplify imports/exports.
+  - Added a `styles/` directory for importing CSS files.
+    - Also moved the main tailwind CSS file.
+- Added a directory within `enhanced/` -> `loaders/`
+  - These are "loading" components
+  - Added `<StackLoader />`
+  - Added `<BounceLoader />`
+- Added a directory within `enhanced/` -> `cards/`
+  - Added `<FlipCard />`
+- Updated all dependencies to latest versions
+- Fixed issue where `className` prop was required by just passing `props.className` onto the components (rather than it being it's own parameter)

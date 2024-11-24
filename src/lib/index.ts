@@ -1,4 +1,4 @@
-import './tailwind/theme.css'
+import './styles/tailwind/theme.css'
 
 import {
   Button,
@@ -23,6 +23,12 @@ import {
   SelectValue,
   Textarea,
   type TextareaProps,
+  StackLoader,
+  type StackLoaderProps,
+  BounceLoader,
+  type BounceLoaderProps,
+  FlipCard,
+  type FlipCardProps,
 } from './components'
 
 export {
@@ -48,6 +54,12 @@ export {
   SelectValue,
   Textarea,
   type TextareaProps,
+  StackLoader,
+  type StackLoaderProps,
+  BounceLoader,
+  type BounceLoaderProps,
+  FlipCard,
+  type FlipCardProps,
 }
 
 import { useScreenSize, useFetch } from './hooks'

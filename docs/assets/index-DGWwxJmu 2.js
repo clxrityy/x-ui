@@ -1,0 +1,1 @@
+import{j as e}from"./jsx-runtime-DR9Q75dM.js";import{c as s}from"./cn-BM_CldAA.js";function n({...o}){return e.jsx("div",{className:s("bounce-loader",o.className),...o})}n.__docgenInfo={description:"",methods:[],displayName:"BounceLoader",composes:["ComponentProps"]};export{n as B};
