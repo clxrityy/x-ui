@@ -10,13 +10,13 @@ export interface SkeletonProps extends ComponentProps<'div'> {
 export const Skeleton = ({ width = 250, height = 100, borderRadius, ...props }: SkeletonProps) => {
   return (
     <div
+      {...props}
       className={cn('animate-pulse bg-gray-200/85 rounded-md', props.className)}
       style={{
         width,
         height,
         borderRadius,
       }}
-      {...props}
     />
   )
 }

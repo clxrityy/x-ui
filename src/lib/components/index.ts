@@ -22,6 +22,8 @@ import {
   SelectValue,
   Textarea,
   type TextareaProps,
+  Loader,
+  type LoaderProps,
 } from './base'
 
 export {
@@ -47,9 +49,29 @@ export {
   SelectValue,
   Textarea,
   type TextareaProps,
+  Loader,
+  type LoaderProps,
 }
 
 // ENHANCED COMPONENTS
 
-import { StackLoader, type StackLoaderProps, BounceLoader, type BounceLoaderProps } from './enhanced'
-export { StackLoader, type StackLoaderProps, BounceLoader, type BounceLoaderProps }
+import {
+  StackLoader,
+  type StackLoaderProps,
+  BounceLoader,
+  type BounceLoaderProps,
+  WasherLoader,
+  type WasherLoaderProps,
+  MacbookAnimation,
+  type MacBookAnimationProps,
+} from './enhanced'
+export {
+  StackLoader,
+  type StackLoaderProps,
+  BounceLoader,
+  type BounceLoaderProps,
+  WasherLoader,
+  type WasherLoaderProps,
+  MacbookAnimation,
+  type MacBookAnimationProps,
+}

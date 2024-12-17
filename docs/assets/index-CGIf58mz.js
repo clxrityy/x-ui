@@ -1,0 +1,1 @@
+import{j as s}from"./jsx-runtime-DR9Q75dM.js";import{c as e}from"./cn-CytzSlOG.js";function a({...o}){return s.jsx("div",{...o,className:e("washer-loader",o.className)})}a.__docgenInfo={description:"",methods:[],displayName:"WasherLoader",composes:["ComponentProps"]};export{a as W};

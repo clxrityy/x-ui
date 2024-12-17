@@ -21,7 +21,7 @@ export const Spoiler = ({ previewText, children, size = 20, Icons, ...props }: S
   }
 
   return (
-    <div className={cn(props.className, 'flex flex-col gap-5')} {...props}>
+    <div {...props} className={cn(props.className, 'flex flex-col gap-5')}>
       <button className="flex flex-row gap-2 items-center justify-center cursor-pointer" onClick={handleClick}>
         <p>{previewText}</p>
         <span>

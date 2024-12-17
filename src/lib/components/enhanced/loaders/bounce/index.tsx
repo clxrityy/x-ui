@@ -5,7 +5,7 @@ import { cn } from '../../../../../util/cn'
 interface BounceLoaderProps extends ComponentProps<'div'> {}
 
 function BounceLoader({ ...props }: BounceLoaderProps) {
-  return <div className={cn('bounce-loader', props.className)} {...props} />
+  return <div {...props} className={cn('bounce-loader', props.className)} />
 }
 
 export { BounceLoader, type BounceLoaderProps }

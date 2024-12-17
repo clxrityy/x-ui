@@ -11,3 +11,9 @@ export const ICONS = {
   ARROW_DOWN: IoIosArrowDown,
   ARROW_UP: IoIosArrowUp,
 }
+
+export const URLS = {
+  ipify: 'https://api.ipify.org?format=json',
+  ip_api: 'http://ip-api.com/json',
+  weather: 'https://api.open-meteo.com/v1/forecast',
+}

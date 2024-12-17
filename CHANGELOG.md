@@ -10,7 +10,7 @@
     - [1.0.7](#107)
     - [1.0.9](#109)
     - [1.2.8](#128)
-    - [1.2.9](#129)
+    - [1.3.0](#130)
 
 ---
 
@@ -116,6 +116,32 @@
 - Fixed issue where `className` prop was required by just passing `props.className` onto the components (rather than it being it's own parameter)
 
 
-# 1.2.9
+# 1.3.0
 
 - Removed the `<FlipCard />` (temporarily) for unknown issues
+- Updated the [home page](https://clxrityy.github.io/x-ui/?path=/docs/home--docs) of the documentation
+- Updated to latest Node version
+    - Updated `.nvmrc`
+    - Updated `engines.node` in package.json
+- Updated packages to latest versions
+- Added a `useLocation()` hook that takes in an optional IP parameter
+    - If no IP is specified, will use the address of the user.
+    - Returns an object like:
+    ```json
+    {
+        "lat": 44.74683,
+        "lon": -66.8888,
+        "city": "Sacramento",
+        "regionName": "California",
+        "region": "CA",
+        "countryCode": "US",
+        "country": "United States",
+        "status": "success",
+        "query": "00.000.000.000"
+    }
+    ```
+- Added another loader component: `<WasherLoader />`
+- Discovered an issue where if `className` is defined BEFORE `{...props}`, the className won't apply. So I fixed that.
+- Added a `README` page within the **Components** directory on the documentation.
+- Added a **base** `<Loader />` component
+    - Using this to showcase a **base** component vs an **enhanced**

@@ -32,5 +32,7 @@ export {
   SelectTrigger,
   SelectValue,
 }
+import { Loader, type LoaderProps } from './loader'
+export { Loader, type LoaderProps }
 import { Textarea, type TextareaProps } from './textarea'
 export { Textarea, type TextareaProps }

@@ -1,0 +1,65 @@
+import { Meta } from '@storybook/blocks'
+import { Loader, StackLoader } from '../lib'
+
+<Meta title="Components/README" />
+
+# Components
+
+Components are separated into two main categories:
+
+1. **Base**
+   - These are base minimal components that are used to build more complex components, and/or used in utilization of other components.
+   - Included in these components are simple styles that can be easily overridden.
+   - These components are designed to be used in a variety of ways, and can be customized to fit your needs.
+2. **Enhanced**
+   - These are more complex components that are built and/or styled to be used in a specific way.
+   - A lot of these components are designed heavily with custom CSS, and while they can be customized, you can not change the core design of the component without modifying the source code.
+   - Enhanced components are separated into various categories where you can find multiple variations of an idea.
+
+<br />
+
+## Base vs Enhanced (loader)
+
+### Base
+
+```tsx
+import '@clxrity/x-ui/dist/style.css'
+import { Loader } from '@clxrity/x-ui'
+
+export const Component = () => {
+  return (
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '25px' }}>
+      <Loader size={40} />
+    </div>
+  )
+}
+```
+
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '25px' }}>
+  <Loader size={40} />
+</div>
+
+<br />
+
+### Enhanced
+
+#### [**Stack Loader**](https://clxrityy.github.io/x-ui/?path=/story/components-enhanced-loaders-stackloader--default)
+
+```tsx
+import '@clxrity/x-ui/dist/style.css'
+import { StackLoader } from '@clxrity/x-ui'
+
+export const Component = () => {
+  return (
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '75px' }}>
+      <StackLoader />
+    </div>
+  )
+}
+```
+
+<br />
+
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '75px' }}>
+  <StackLoader />
+</div>

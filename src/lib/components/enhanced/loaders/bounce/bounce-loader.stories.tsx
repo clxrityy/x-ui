@@ -22,5 +22,5 @@ export const Default = Template.bind({})
 
 export const Custom = Template.bind({})
 Custom.args = {
-  className: 'grayscale',
+  className: 'invert',
 }
